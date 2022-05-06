@@ -41,7 +41,7 @@ SkyWalking 后端是开启 SkyWalk 的前置条件，下面先简单演示下如
 
 下载完，直接解压得到如下的目录结构。
 
-```bash
+```sh
 $ ls
 bin  config  config-examples  LICENSE  licenses  logs  NOTICE  oap-libs  README.txt  tools  webapp
 ```
@@ -49,13 +49,13 @@ bin  config  config-examples  LICENSE  licenses  logs  NOTICE  oap-libs  README.
 后端默认使用 H2 内存数据库作为后端存储，不需要修改配置。按如下方式启动。
 
 启动 Backend
-```bash
-$ bash bin/startup.sh
+```sh
+$ sh bin/startup.sh
 ```
 
 启动 WebApp
-```bash
-$ bash bin/webappService.sh
+```sh
+$ sh bin/webappService.sh
 ```
 
 UI 默认启动在 8080 端口，也可以通过修改 webapp 目录下的 webapp.yml 文件修改监听端口。
@@ -102,7 +102,7 @@ management:
 ![](/Images-zh/deployment/skywalking/SkyWalking_Agent_Download.png)
 
 下载之后解压，内部的文件结构如下：
-```bash
+```sh
 tree skywalking-agent                                   
 $ skywalking-agent
 ├── LICENSE
@@ -131,13 +131,13 @@ $ skywalking-agent
 ```
 
 修改 Linkis 的 deploy-config/linkis-env.sh 中的配置项 `SKYWALKING_AGENT_PATH`。将其设置为 `skywalking-agent.jar` 的路径。
-```bash
+```sh
 SKYWALKING_AGENT_PATH=/path/to/skywalking-agent.jar
 ```
 
 然后启动 Linkis 即可。
-```bash
-$ bash linkis-start-all.sh
+```sh
+$ sh linkis-start-all.sh
 ```
 
 ## 4. 结果展示
